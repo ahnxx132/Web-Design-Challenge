@@ -1,3 +1,152 @@
+<!-- https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp# -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- reset the style -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- drop down doesnt work with the above latest bootcamp link from https://getbootstrap.com/docs/5.2/getting-started/introduction/...
+    this link works: https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Set the style with style.css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+<body>
+
+  
+
+  <!-- helpful link below -->
+ <!-- https://getbootstrap.com/docs/4.0/components/navbar/        -->
+          <!-- add drop down  -->
+
+  <!-- Latitude Navigation Bar -->
+  
+  <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="col-sm-12 col-md-2">
+          <a class="navbar-brand" style="background-color:rgb(16, 172, 164);" href="index.html">Latitude</a>
+          <button class="navbar-toggler border border-black " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        
+
+<!-- Plot, Comparison, Data Navigation Bar -->        
+        <div class="col-sm-12 col-md-7"></div>
+          <!-- add drop down  -->
+          <!-- this is for small screen adjustment -->
+          <div class="col-sm-12 col-md-2">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Plot
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="temp.html">Max Temperature</a>
+                  <a class="dropdown-item" href="humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                  
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Comparisons.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+                            
+            </ul>
+          </div>  
+          </div>
+      </nav>
+  </div>
+
+  <!-- Navigation end -->
+
+      <!-- content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+              <div class=box>
+                <h3>Summary: Latitude vs. X</h3>
+                <hr>
+                <div class="col-12">
+                <img class="img float-left" src="../Resources/assets/images/Fig1.png" alt="Latitude vs X">
+                </div>
+                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
+                To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                </p>
+                
+                <p>After assembling the dataset,  we used Matplotlib  to plot various aspects of the weather vs. latitude. 
+                Factors we looked  at included:  temperature, cloudiness, wind speed, and humidity. 
+                This site provides thesource data and visualizations created as part of the analysis, as well as explanations and descriptions
+                of any trends and correlations witnessed. </p>
+              </div>
+          </div>
+        <div class="col-sm-12 col-md-4">
+             
+          
+          <!-- Start of Visualizations imageNav Area -->
+          <div class=box>
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h4 class="imageNav-header">Visualizations</h4>
+              <hr>
+              <div class="container">
+                       <div class="row">
+                        <div class="col-6">
+                    <a href="temp.html">
+                            <img src="..\Resources\assets\images/Fig1.png" alt="Latitude vs. Max Temperature",  class="imageNav-photo">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                    <a href="humidity.html">
+                            <img src="..\Resources/assets/images/Fig2.png" alt="Latitude vs. Humidity",  class="imageNav-photo">
+                          </a>
+                </div>
+                        <div class="col-6">
+                    <a href="cloudiness.html">
+                            <img src="..\Resources/assets/images/Fig3.png" alt="Latitude vs. Cloudiness",  class="imageNav-photo">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                    <a href="windspeed.html">
+                            <img src="..\Resources/assets/images/Fig4.png" alt="Latitude vs. Wind Speed",  class="imageNav-photo">
+                            </a>
+                        </div>
+                </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+       <!-- containter end -->
+  <!-- footer -->
+    <footer>
+    <div class="footer">&copy; Copyright Sung Ahn 2022
+
+    </div>
+  </footer>
+  <!-- footer end -->
+</body>
+
+</html>
+
+
+
 # Unit 11 Homework: Web Visualization Dashboard 
 
 ## Background
